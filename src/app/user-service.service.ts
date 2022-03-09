@@ -8,12 +8,12 @@ export class UserServiceService {
 
   private upersons: User[] = [
     {
-      id: 24,
+      Age: 24,
       Name: 'Navnath',
       lastName: 'Kumbhar'
     },
     {
-      id: 26,
+      Age: 26,
       Name: 'Rajat',
       lastName: '.'
     }
@@ -26,12 +26,12 @@ export class UserServiceService {
   }
 
   addUser(user: User) {
-    user.id = this.upersons.length + 1;
+    user.Age = this.upersons.length + 1;
     this.upersons.push(user);
 
   }
   updateUser(user: User) {
-    const index = this.upersons.findIndex(u => user.id === u.id);
+    const index = this.upersons.findIndex(u => user.Age === u.Age);
     this.upersons[index] = user;
   }
   deleteUser(user: User) {
